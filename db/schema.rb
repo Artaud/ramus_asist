@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125114907) do
+ActiveRecord::Schema.define(version: 20140425162619) do
+
+  create_table "asistents", force: true do |t|
+    t.string   "jmeno"
+    t.string   "prijmeni"
+    t.string   "email"
+    t.integer  "telefon"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "osobas", force: true do |t|
     t.string   "jmeno"

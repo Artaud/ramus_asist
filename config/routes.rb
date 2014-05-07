@@ -1,5 +1,7 @@
 RamusVykaz::Application.routes.draw do
-  resources :prace_polozkas
+  resources :asistents
+
+  # resources :prace_polozkas
 
   resources :osobas
 
@@ -14,7 +16,7 @@ RamusVykaz::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'prace_polozkas#index'
+  root 'asistents#index'
 
 # Example of regular route:
 #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,69 @@
+<div class="padding">
+	<div class="panel panel-default">
+		<div class="panel-body center">
+
+			<% if signed_in? %>
+				<% if current_user.email != "asistent@ramus.je" %>
+				<%= link_to 'Vlozit asistenta', new_asistent_path %>
+				<% end %>
+			<table id="asistents" class="table table-condensed table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>Jméno</th>
+						<th>Příjmení</th>
+						<th>Email</th>
+						<th>Telefon</th>
+					<% if current_user.email != "asistent@ramus.je" %>	
+						<th></th>
+						<th></th>
+					<% end %>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @asistents.each do |asistent| %>
+					<tr>
+						<td><%= asistent.jmeno %></td>
+						<td><%= asistent.prijmeni %></td>
+						<td><%= asistent.email %></td>
+						<td><%= asistent.telefon %></td>
+					  <% if current_user.email != "asistent@ramus.je" %>
+			            <td>
+			              <%= link_to 'Upravit záznam', edit_asistent_path(asistent) %>
+			            </td>
+					    <td>
+			              <%= link_to 'Smazat záznam', asistent, method: :delete, data: { confirm: 'Rozmysli si, Maruško, rozmysli!' } %>
+			            </td>
+				      <% end %>
+			        </tr>
+					<% end %>
+
+				</tbody>
+				<tfoot>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					  <% if current_user.email != "asistent@ramus.je" %>
+			            <td></td>
+			            <td></td>
+					    <td></td>
+				      <% end %>
+					</tr>
+				</tfoot>
+			</table>
+
+			<div class="container">
+				<div class="row">
+          <% else %>
+          <h1 class="nazev">KONTAKTNÍK<br>RAMUSISTENTŮ</h1>
+					<%= link_to "přihlaš se!", signin_path, :class => "btn btn-lg btn-prihlas" %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

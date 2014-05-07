@@ -9,3 +9,7 @@
 .field_with_errors {
   @extend .has-error;
 }
+
+.top-buffer {
+  margin-top: 20px;
+}

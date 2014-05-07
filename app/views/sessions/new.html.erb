@@ -1,17 +1,56 @@
 <div class="container">
-	<div class="row">
-		<%= form_for(:session, url: sessions_path) do |f| %>
-		<div class="col-md-2">
+	<div class="row top-buffer">
+  		<div class="col-md-1">
+  			<div id="toggle">
+  				<button type="button" class="btn btn-link btn-xs">ad</button>
+  			</div>
+  		</div>
+  		<div class="col-md-3"></div>
+  		<div class="col-md-4">
+  				<%= form_for(:session, url: sessions_path) do |f| %>
 			<div class="form-group">
-				<%= f.label :email, class: "col-md-2 control-label" %>
-				<%= f.text_field :email, class: "col-md-4 form-control" %>
+				<div id='admin' style="display:none">
+					<div class="col-md-2">
+						<%= f.label :email, class: "control-label" %>
+					</div>
+					<div class="col-md-10">
+						<%= f.text_field :email, class: "form-control", value: "asistent@ramus.je" %>
+					</div>
+				</div>
 			</div>
+  		</div>
+  		<div class="col-md-4"></div>
+	</div>
+	<div class="row top-buffer">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
 			<div class="form-group">
-				<%= f.label :password, class: "col-md-2 control-label" %>
-				<%= f.password_field :password, class: "col-md-4 form-control" %>
+				<div class="col-md-2">
+				<%= f.label :password, 'heslo', class: "control-label" %>
+				</div>
+				<div class="col-md-10">
+				<%= f.password_field :password, class: "form-control" %>
+				</div>
 			</div>
-			<%= f.submit "vstup!", class: "btn btn-large btn-primary" %>
-			<% end %>
 		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<%= f.submit "vstup!", class: "btn btn-large btn-prihlas" %>	
+			</div>
+			
+		</div>
+	</div>
+	<div class="row top-buffer">
+		<div class="col-md-2"></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-2"></div>
+		<div class="col-md-2">
+			<!-- <div class="form-group">
+				<%= f.submit "vstup!", class: "btn btn-large btn-prihlas" %>
+				<% end %>	 -->		
+			<!-- </div> -->
+		</div>
+		<div class="col-md-2"></div>
+		<div class="col-md-2"></div>
 	</div>
 </div>
