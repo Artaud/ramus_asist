@@ -33,10 +33,18 @@ img {
   }
 // apply styles to HTML elements
 // to make views framework-neutral
+.control-label-mod {
+  @extend .control-label;
+  font-family: courier;
+  font-size: large;
+}
+.form-group-mod {
+  vertical-align: bottom;
+}
 main {
   @extend .container;
-  background-color: #eee;
-  padding-bottom: 80px;
+  background-color: #ff3366;
+  margin-bottom: 80px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
   }

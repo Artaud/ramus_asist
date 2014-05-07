@@ -30,5 +30,6 @@ User.create([{osoba_id: "1", email: "hynek.trojanek@ramus-os.cz", password: "kub
   {osoba_id: "8", email: "jirka.richter@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "9", email: "bara.aunicka@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
   {osoba_id: "10", email: "anna.srubarova@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}, 
-  {osoba_id: "11", email: "ondrej.balik@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"}
+  {osoba_id: "11", email: "ondrej.balik@ramus-os.cz", password: "kubaverich", password_confirmation: "kubaverich"},
+  {email: "asistent@ramus.je", password: 'kubamares', password_confirmation: 'kubamares'}
   ])

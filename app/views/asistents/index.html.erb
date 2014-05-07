@@ -48,16 +48,15 @@
 					  <% if current_user.email != "asistent@ramus.je" %>
 			            <td></td>
 			            <td></td>
-					    <td></td>
 				      <% end %>
 					</tr>
 				</tfoot>
 			</table>
 
+<% else %>
 			<div class="container">
 				<div class="row">
-          <% else %>
-          <h1 class="nazev">KONTAKTNÍK<br>RAMUSISTENTŮ</h1>
+          			<h1 class="nazev">KONTAKTNÍK<br>RAMUSISTENTŮ</h1>
 					<%= link_to "přihlaš se!", signin_path, :class => "btn btn-lg btn-prihlas" %>
 					<% end %>
 				</div>

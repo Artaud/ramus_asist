@@ -1,3 +1,4 @@
+<%= form_for(:session, url: sessions_path) do |f| %>
 <div class="container">
 	<div class="row top-buffer">
   		<div class="col-md-1">
@@ -5,13 +6,12 @@
   				<button type="button" class="btn btn-link btn-xs">ad</button>
   			</div>
   		</div>
-  		<div class="col-md-3"></div>
+  		<div class="col-md-2"></div>
   		<div class="col-md-4">
-  				<%= form_for(:session, url: sessions_path) do |f| %>
 			<div class="form-group">
 				<div id='admin' style="display:none">
-					<div class="col-md-2">
-						<%= f.label :email, class: "control-label" %>
+					<div class="col-md-2 paddingtop8">
+						<%= f.label :email, 'email', class: "control-label-mod" %>
 					</div>
 					<div class="col-md-10">
 						<%= f.text_field :email, class: "form-control", value: "asistent@ramus.je" %>
@@ -19,38 +19,33 @@
 				</div>
 			</div>
   		</div>
-  		<div class="col-md-4"></div>
+  		<div class="col-md-5"></div>
 	</div>
 	<div class="row top-buffer">
-		<div class="col-md-4"></div>
+		<div class="col-md-3"></div>
 		<div class="col-md-4">
-			<div class="form-group">
-				<div class="col-md-2">
-				<%= f.label :password, 'heslo', class: "control-label" %>
+			<div class="form-group">	
+				<div class="col-md-2 paddingtop8">
+				<%= f.label :password, 'heslo', class: "control-label-mod" %>
 				</div>
 				<div class="col-md-10">
 				<%= f.password_field :password, class: "form-control" %>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-5">
 			<div class="form-group">
-				<%= f.submit "vstup!", class: "btn btn-large btn-prihlas" %>	
-			</div>
-			
+				<%= f.submit "vstup!", class: "btn btn-large btn-prihlas" %>
+			</div>			
 		</div>
 	</div>
 	<div class="row top-buffer">
 		<div class="col-md-2"></div>
 		<div class="col-md-2"></div>
 		<div class="col-md-2"></div>
-		<div class="col-md-2">
-			<!-- <div class="form-group">
-				<%= f.submit "vstup!", class: "btn btn-large btn-prihlas" %>
-				<% end %>	 -->		
-			<!-- </div> -->
-		</div>
+		<div class="col-md-2"></div>
 		<div class="col-md-2"></div>
 		<div class="col-md-2"></div>
 	</div>
 </div>
+<% end %>	

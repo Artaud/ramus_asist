@@ -17,9 +17,10 @@
 			<ul class="nav navbar-nav navbar-right">
 				<% if signed_in? %>
 				<li class="navbar-text">
-					<% if current_user.email = "asistent@ramus.je" %>
-					jsi přihlášen jako ASISTENT
+					<% if current_user.email == "asistent@ramus.je" %>
+						<%= 'jsi přihlášen/a jako ASISTENT' %>
 					<% else %>
+					<%= 'jsi přihlášen/a jako ADMINISTRÁTOR: '%>
 					<%= Osoba.find_by(id: current_user.osoba_id).jmeno + " " +
 					Osoba.find_by(id: current_user.osoba_id).prijmeni %>
 					<% end %>
