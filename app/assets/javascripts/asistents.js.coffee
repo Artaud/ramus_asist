@@ -16,13 +16,14 @@ tab = ->
       sInfo: "Zobrazuji záznamy _START_ - _END_ (z celkových _TOTAL_)"
       sInfoFiltered: " - filtrováno _MAX_ záznamů"
       sSearch: "Hledání:"
+      iDisplayLength: -1
       sLengthMenu: '<select>'+
+        '<option value="-1">\u221e</option>'+
         '<option value="10">10</option>'+
         '<option value="20">20</option>'+
         '<option value="30">30</option>'+
         '<option value="40">40</option>'+
         '<option value="50">50</option>'+
-        '<option value="-1">\u221e</option>'+
         '</select> řádků na stránce'
   })
 
