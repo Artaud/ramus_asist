@@ -6,6 +6,7 @@
 tab = ->
   $('#asistents').dataTable({
     bStateSave: true
+    iDisplayLength: -1
     oLanguage: 
       oPaginate:
         sFirst: "<<"
@@ -16,7 +17,7 @@ tab = ->
       sInfo: "Zobrazuji záznamy _START_ - _END_ (z celkových _TOTAL_)"
       sInfoFiltered: " - filtrováno _MAX_ záznamů"
       sSearch: "Hledání:"
-      iDisplayLength: -1
+
       sLengthMenu: '<select>'+
         '<option value="-1">\u221e</option>'+
         '<option value="10">10</option>'+
